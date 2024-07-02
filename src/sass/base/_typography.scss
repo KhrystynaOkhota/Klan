@@ -1,0 +1,92 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-light {
+    font-weight: 300;
+  }
+
+  &-regular {
+    font-weight: 400;
+  }
+
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-semibold {
+    font-weight: 600;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-xl {
+    @include fontSize(28, 40);
+    line-height: 1.22;
+  }
+
+  &-l {
+    @include fontSize(18, 24);
+    line-height: 1.221;
+  }
+
+  &-m {
+    @include fontSize(16, 18);
+    line-height: 1.22;
+  }
+
+  &-s {
+    @include fontSize(14, 16);
+    line-height: 1.22;
+  }
+}
+
+.icon-right:before {
+  content: "\e901";
+}
+
+.heading {
+  &.decor {
+    margin-left: 20px;
+
+    &:after {
+      content: '';
+      width: 2px;
+      height: 85%;
+      position: absolute;
+      left: -20px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background-color: #A59389;
+    }
+  }
+
+  &__sub {
+
+    letter-spacing: 0.19em;
+    color: $accentColor;
+  }
+}

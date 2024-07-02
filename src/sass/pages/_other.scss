@@ -1,0 +1,44 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-other {
+  & .decor {
+    width: 100%;
+    max-width: 402px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  &__inner {
+    height: 100vh;
+
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 380px;
+    @media (max-width: $breakpoint-md) {
+      max-width: 260px;
+    }
+    @media (max-width: 400px) {
+      max-width: 220px;
+    }
+    margin: 0 auto;
+  }
+
+  & .description {
+    margin-bottom: 40px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  & .btn-primary {
+    width: 100%;
+    max-width: 180px;
+
+    margin: 0 auto;
+  }
+}

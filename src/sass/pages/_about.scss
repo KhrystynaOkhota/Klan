@@ -1,0 +1,273 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.s-introduce {
+
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &--wrap {
+      padding-bottom: 62%;
+    }
+  }
+
+  & .decor-large {
+    position: absolute;
+    width: 50%;
+    left: 10px;
+  }
+
+  & .number {
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 32px 0;
+      @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 12px;
+    }
+
+    &__description {
+      color: #565656;
+    }
+
+    &__item {
+      &.decor {
+        &:after {
+          content: '';
+          height: 44px;
+          width: 2px;
+          background-color: #000000;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  & .heading {
+    @media (max-width: $breakpoint-sm) {
+      margin-bottom: 33px;
+    }
+  }
+
+  & .description {
+    @media (max-width: $breakpoint-sm) {
+      padding-left: 20px;
+    }
+  }
+}
+
+.s-values {
+
+  .values {
+    &__wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      @media (max-width: $breakpoint-sm) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    &__item {
+      padding: 0 20px;
+
+      &:nth-child(even) {
+        @media (min-width: $breakpoint-md) {
+
+          margin-top: 84px;
+        }
+      }
+    }
+
+    &__img {
+      &-wrap {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 32px;
+        @media (max-width: $breakpoint-sm) {
+          width: 32px;
+          height: 32px;
+          margin-bottom: 18px;
+        }
+        &:after {
+          content: '';
+          width: 2px;
+          height: calc(100% + 2px);
+          position: absolute;
+          left: -20px;
+          top: -1px;
+          background-color: #A59389;
+        }
+      }
+    }
+
+    &__heading {
+      margin-bottom: 16px;
+      @media (max-width: $breakpoint-sm) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__description {
+
+    }
+  }
+}
+
+.s-experience {
+  &__inner {
+    display: grid;
+    align-content: space-between;
+  }
+
+  .btn-primary {
+    margin-left: 20px;
+    @media (max-width: $breakpoint-md) {
+      max-width: 245px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .title {
+    margin-bottom: 12px;
+  }
+  & .description{
+    margin-bottom: 24px;
+  }
+}
+
+.s-history {
+  margin-bottom: 180px;
+
+  & .swiper-button {
+    &-prev {
+      padding-right: 32px;
+    }
+
+    &-next {
+      padding-left: 32px;
+    }
+
+    &__wrap {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      padding: 36px;
+
+      z-index: 2;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(13px);
+        -webkit-backdrop-filter: blur(13px);
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+
+      &:before {
+        content: '';
+        height: 13px;
+        width: 1px;
+        background-color: rgba(255, 255, 255, .2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+}
+
+.s-team {
+
+
+  &__top {
+    margin-bottom: 44px;
+  }
+
+  .swiper-slide {
+    &:nth-child(even) {
+      .team__item {
+        margin-top: 80px;
+        @media (max-width: $breakpoint-md) {
+          margin-top: 40px;
+        }
+        @media (max-width:375px) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .team {
+    &__item {
+
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &-wrap {
+        margin-bottom: 32px;
+        padding-bottom: 130%;
+        position: relative;
+      }
+    }
+
+    &__name {
+      margin-bottom: 12px;
+    }
+
+    &__position {
+
+    }
+
+    &__info {
+      &.decor {
+        padding-left: 20px;
+
+        &:after {
+          content: '';
+          height: calc(100% - 4px);
+          width: 2px;
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.s-partners {
+
+}

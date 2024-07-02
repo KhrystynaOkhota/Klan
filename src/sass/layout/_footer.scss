@@ -1,0 +1,125 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.footer {
+  overflow: hidden;
+  background: rgba(255, 255, 255, .1);
+  border-top: 1px solid #fff;
+  position: relative;
+  z-index: 66655;
+  @media (max-width: $breakpoint-md) {
+    padding: 32px 0 0 0;
+  }
+
+
+  .logo {
+    &__wrap {
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  & .cta-form {
+    width: 100%;
+    @media (max-width: $breakpoint-md) {
+      max-width: 400px;
+    }
+
+    & .btn-primary {
+      margin-left: auto;
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+      }
+
+    }
+  }
+
+  &-item {
+    &:not(&:last-child) {
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 20px;
+      color: $accentColor;
+      font-size: 18px;
+    }
+  }
+
+
+  &__main {
+    padding: 32px 0;
+  }
+
+  &__bottom {
+    padding: 18px 0;
+    background-color: #D8D6D1;
+    @media (max-width: $breakpoint-md) {
+      text-align: center;
+      padding: 24px 0;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      flex: 0 0 50%;
+      margin-bottom: 24px;
+    }
+  }
+
+  .contact {
+    &__item {
+      & + .contact__item {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .social {
+    &__list {
+      position: absolute;
+      right: 0;
+      top: -4px;
+    }
+
+    &__item {
+      & + .social__item {
+        margin-left: 14px;
+      }
+    }
+
+    &__link {
+      display: block;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  .develop {
+
+    @media (min-width: $breakpoint-md) {
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+    }
+    @media (max-width: $breakpoint-md) {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top:24px
+    }
+
+    &__link {
+      margin-left: 16.45px;
+    }
+  }
+}
+
