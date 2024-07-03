@@ -6,8 +6,80 @@
 /* MAIN SLIDER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .s-main {
-  & .swiper-entry {
+  &__row {
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  &__slider {
     margin-right: calc((-100vw + 100%) / 2);
+    position: relative;
+    @media (min-width: $breakpoint-lg) {
+      &:after, &:before {
+        content: '';
+        width: 180px;
+        height: 180px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        z-index: 2;
+      }
+
+      &:before {
+        top: 0;
+      }
+
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+
+  & .social {
+    &__title {
+      transform: rotate(-90deg);
+    }
+
+    &__wrap {
+      @media (min-width: $breakpoint-lg) {
+        height: calc(100vh - 360px);
+        margin-top: 180px;
+        display: grid;
+        align-content: space-between;
+      }
+    }
+
+    &__item {
+      & + .social__item {
+        margin-top: 24px;
+      }
+
+      & a {
+        display: block;
+
+        & img {
+
+        }
+      }
+    }
+  }
+
+  & .fraction {
+    &__wrap {
+      position: absolute;
+      bottom: 0;
+      z-index: 4;
+    }
+
+    &__total {
+
+    }
+
+    &__current {
+      margin-right: 28px;
+    }
   }
 }
 
@@ -28,6 +100,7 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    text-align: right;
   }
 }
 
@@ -211,7 +284,7 @@
   }
 
   & .heading {
-
+    margin-left: 0;
   }
 
   & .btn-more {
@@ -615,15 +688,22 @@
 }
 
 .s-news {
-  margin-bottom: 180px;
+
 
   & .news {
     &__item {
       margin-bottom: 40px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 32px;
+      }
+
     }
 
     &__info {
       padding: 24px 0 0 20px;
+      @media (max-width: $breakpoint-md) {
+        padding: 10px 0 0 12px;
+      }
     }
 
     &__img {
@@ -646,6 +726,9 @@
     &__date {
       margin-bottom: 24px;
       color: #8D8D8D;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 12px;
+      }
 
       &:before {
         content: '';
@@ -656,11 +739,17 @@
         top: 50%;
         transform: translateY(-50%);
         background-color: #000;
+        @media (max-width: $breakpoint-md) {
+          left: -12px;
+        }
       }
     }
 
     &__title {
       margin-bottom: 18px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 10px;
+      }
     }
 
     &__text {
@@ -780,57 +869,3 @@
 }
 
 
-.s-contacts {
-  .contact {
-    &__title {
-      margin-bottom: 12px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 8px;
-      }
-    }
-
-    &__info {
-    }
-
-    &__title, &__info {
-      @include fontSize(14, 16);
-    }
-  }
-
-  &__cta {
-    background-color: #D8D6D1;
-    padding: 20px;
-    @media (max-width: $breakpoint-md) {
-      padding: 12px 12px 0 12px;
-    }
-  }
-
-  &__map {
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    position: absolute !important;
-
-    &--wrap {
-      height: 370px;
-      margin-top: -50px;
-      z-index: 1;
-    }
-  }
-
-  .contact {
-    &.decor {
-      padding-left: 20px;
-
-      &:before {
-        content: '';
-        width: 2px;
-        height: 44px;
-        background-color: #000;
-        position: absolute;
-        left: 0;
-        top: 3px;
-      }
-    }
-  }
-}

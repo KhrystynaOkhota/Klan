@@ -24,7 +24,10 @@
   &-primary {
     color: #fff;
     background: #A59389;
-
+    & i {
+      padding-left: 12px;
+      font-size: 12px;
+    }
     &:hover {
 
     }
