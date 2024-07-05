@@ -1,16 +1,107 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+.s-article {
+  margin-bottom: 44px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 40px;
+  }
+
+  &__action {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    @media (max-width: $breakpoint-md) {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__title {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__date {
+    margin-right: 8px;
+    padding: 19px 20px;
+    border: 1px solid #242424;
+    border-radius: 100px;
+    color: #1B1B1B;
+  }
+
+  &__share {
+    border-radius: 100px;
+    padding: 20px;
+    background-color: #A59389;
+    color: #fff;
+
+    & i {
+      padding-right: 20px;
+      font-size: 18px;
+      color: #fff;
+
+      &:after {
+        content: '';
+        width: 1px;
+        height: 9px;
+        background-color: rgba(255, 255, 255, .2);
+        border-radius: 9px;
+      }
+    }
+  }
+
+  &__desc {
+
+    @media (min-width: $breakpoint-md) {
+
+    }
+  }
+}
+
+
 .s-text {
 
 }
 
-.s-img{
+.s-grid {
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 
+    &__wrap {
+      position: relative;
+      padding-bottom: 100%;
+    }
+  }
 }
-.s-img{
 
+
+.s-image {
+  & .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      position: relative;
+      padding-bottom: 62%;
+    }
+  }
 }
+
 .s-video {
   & .btn-pulse {
     bottom: 50px;
@@ -71,33 +162,6 @@
   }
 }
 
-.s-article {
-  margin-bottom: 44px;
-  @media (max-width: $breakpoint-md) {
-    margin-bottom: 40px;
-  }
-
-  &__title {
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 32px;
-    }
-  }
-
-  &__date {
-    margin-right: 8px;
-    padding: 20px;
-    border: 1px solid #242424;
-    border-radius: 100px;
-    color: #1B1B1B;
-  }
-
-  &__desc {
-
-    @media (min-width: $breakpoint-md) {
-
-    }
-  }
-}
 
 .s-cta {
   &__top {

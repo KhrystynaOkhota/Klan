@@ -3,15 +3,6 @@
 
 .kama_breadcrumbs {
 
-  &__wrap {
-    /* position: absolute;
-     width: 100%;
-     top: 0;
-     left: 0;*/
-
-  }
-
-
   @media (min-width: $breakpoint-md) {
     display: flex;
   }
@@ -41,21 +32,15 @@
   white-space: nowrap;
 
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  @include transition(.4);
   overflow: auto;
   @media (max-width: $breakpoint-md) {
     padding: 20px 0;
   }
 
   & a {
-    color: #979797;
-  }
-
-  & span {
-
+    color: #B0B0B0;
+    @include fontSize(14, 16);
   }
 
   .breadcrumb_last {
@@ -65,31 +50,29 @@
   & .kb {
     &_sep {
 
-      margin: 0 5px;
+      & i {
+        color: #B0B0B0;
+        @include fontSize(12, 14);
+      }
+
+      &:nth-of-type(4) {
+        & i {
+          color: #000000;
+        }
+      }
+
+      margin: 0 24px;
       @media (max-width: $breakpoint-md) {
-        margin: 0 3px;
+        margin: 0 8px;
+      }
+
+      &:has(+ .kb_title) {
+        & i {
+          color: #000;
+        }
       }
     }
 
 
-  }
-}
-
-.woocommerce-breadcrumb {
-  width: 100%;
-  max-width: 1340px !important;
-  margin: auto !important;
-  padding: 10px 15px !important;
-  @media (max-width: $breakpoint-md) {
-    padding-bottom: 20px !important;
-  }
-
-  & a, & {
-    font-weight: 300;
-    font-size: 14px !important;
-    line-height: 18px;
-    color: #4E4E4E !important;
-    position: relative;
-    font-family: 'Mulish', sans-serif;
   }
 }

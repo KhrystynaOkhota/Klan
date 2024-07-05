@@ -49,18 +49,18 @@
             <div class="navbar">
                 <nav class="navbar__menu">
                     <ul class="menu">
-                        <li class="menu-item  current-menu-item">
-                            <a href="">О нас</a>
+                        <li class="menu-item">
+                            <a href="about.html">О нас</a>
                         </li>
                         <li class="menu-item">
-                            <a href=""> Портфолио</a>
+                            <a href="portfolio.html"> Портфолио</a>
                         </li>
-                        <li class="menu-item">
-                            <a href="">Новости</a>
+                        <li class="menu-item current-menu-item">
+                            <a href="blog.html">Новости</a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="">Контакты</a>
+                            <a href="contacts.html">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -69,8 +69,8 @@
                 <a href="tel:000000000000" target="_blank" class="navbar__phone text-s text-bold">+0 000 000 00 00</a>
 
                 <div class="lang__wrap --relative">
-                    <div class="lang__current">
-                        <a href="/ru/">RU</a><!--поточна мова-->
+                    <div class="lang__current d-flex align-middle">
+                        <a href="/ru/">RU</a> <i class="icon-ar-bottom"></i> <!--поточна мова-->
                     </div>
 
                     <ul class="lang">
@@ -91,14 +91,13 @@
         <div class="row">
             <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-12">
                 <div class="kama_breadcrumbs">
-                    <p id="breadcrumbs">
-                        <span>
-                            <span>
-                                <a href="https://www.silk.lviv.ua/">Головна</a>
-                            </span> &nbsp;/&nbsp;
-                            <span class="breadcrumb_last" aria-current="page">Новости</span>
-                        </span>
-                    </p>
+                    <span>
+                        <a href="">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+                    <span class="kb_sep"><i class="icon-ar-forward"></i></span>
+                    <span class="kb_title">Новости</span>
                 </div>
             </div>
         </div>
@@ -301,13 +300,15 @@
                 <div class="col-xl-6 col-lg-7 col-md-8 col-sm-12 col-xs-12 ">
 
                     <nav class="navigation pagination" role="navigation">
-                        <div class="nav-links d-flex"><a class="prev page-numbers" href="https://alba.ua/news/"><i class="icon-arLeft"></i></a>
+                        <div class="nav-links d-flex"><a class="prev page-numbers" href="https://alba.ua/news/"><i
+                                class="icon-arLeft"></i></a>
                             <a class="page-numbers" href="https://alba.ua/news/">1</a>
                             <span aria-current="page" class="page-numbers current">2</span>
                             <a class="page-numbers" href="https://alba.ua/news/page/3/">3</a>
                             <span class="page-numbers dots">…</span>
                             <a class="page-numbers" href="https://alba.ua/news/page/7/">7</a>
-                            <a class="next page-numbers" href="https://alba.ua/news/page/3/"><i class="icon-arRight"></i></a></div>
+                            <a class="next page-numbers" href="https://alba.ua/news/page/3/"><i
+                                    class="icon-arRight"></i></a></div>
                     </nav>
                 </div>
             </div>
@@ -389,48 +390,10 @@
         </div>
     </div>
 </footer>
+
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
-<!--
-<script>
-    var galleryThumbs = new Swiper(".gallery-thumbs", {
-        centeredSlides: true,
-        centeredSlidesBounds: true,
-        slidesPerView: 4,
-        watchOverflow: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        direction: 'vertical'
-    });
-
-    var galleryMain = new Swiper(".gallery-main", {
-        watchOverflow: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        preventInteractionOnTransition: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        thumbs: {
-            swiper: galleryThumbs
-        }
-    });
-
-    galleryMain.on('slideChangeTransitionStart', function () {
-        galleryThumbs.slideTo(galleryMain.activeIndex);
-    });
-
-    galleryThumbs.on('transitionStart', function () {
-        galleryMain.slideTo(galleryThumbs.activeIndex);
-    });
-</script>-->
-
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
         type="text/javascript"></script>
 <script async defer>

@@ -25,22 +25,19 @@
     & h2, & h3, & h4, & h5, & h6 {
       font-weight: bold;
       margin-bottom: 18px;
+      line-height: 1.25;
     }
 
     & h2 {
       @include fontSize(20, 24);
-      line-height: 1.5;
     }
 
     & h3 {
-      font-size: 30px;
-      line-height: 47px;
-      margin-bottom: 8px;
+      @include fontSize(18, 20);
     }
 
     & h4 {
       @include fontSize(16, 18);
-      line-height: 1.444;
     }
 
     & h5 {
