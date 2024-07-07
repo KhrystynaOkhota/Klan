@@ -2,21 +2,37 @@
 @import "../abstracts/variables";
 
 .s-other {
-  & .decor {
+  @media (max-width: $breakpoint-md) {
+    margin-top: 80px;
+  }
+
+  & .decor-bg {
     width: 100%;
     max-width: 402px;
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
+    @media (max-width: $breakpoint-md) {
+      max-width: 286px;
+      right: -15px;
+      transform: none;
+    }
   }
+
 
   &__inner {
     height: 100vh;
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row-reverse;
 
+    }
+    @media (max-width: $breakpoint-md) {
+      height: auto;
+    }
   }
 
-  &__img {
+  & .img {
     width: 100%;
     max-width: 380px;
     @media (max-width: $breakpoint-md) {
@@ -41,4 +57,35 @@
 
     margin: 0 auto;
   }
+
+  &.thanks {
+    @media (max-width: $breakpoint-md) {
+      padding: 152px 0;
+      & .img {
+        max-width: 132px;
+        margin-bottom: 108px;
+        margin-left: 0;
+        margin-right: auto;
+      }
+      & .decor-bg {
+        top: -152px;
+      }
+
+    }
+  }
+
+  &.error {
+    @media (max-width: $breakpoint-md) {
+      padding: 123px 0;
+      & .img {
+        margin-bottom: 80px;
+      }
+      & .decor-bg {
+        top: -123px;
+      }
+
+    }
+  }
+
+
 }

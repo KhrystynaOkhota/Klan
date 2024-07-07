@@ -65,11 +65,12 @@
                 </nav>
 
 
-                <a href="tel:000000000000" target="_blank" class="navbar__phone text-s text-bold">+0 000 000 00 00</a>
+                <a href="tel:000000000000" target="_blank" class="navbar__phone text-s text-semibold">+0 000 000 00
+                    00</a>
 
                 <div class="lang__wrap --relative">
-                    <div class="lang__current">
-                        <a href="/ru/">RU</a><!--поточна мова-->
+                    <div class="lang__current d-flex align-middle">
+                        <a href="/ru/">RU</a> <i class="icon-ar-bottom"></i> <!--поточна мова-->
                     </div>
 
                     <ul class="lang">
@@ -84,93 +85,30 @@
         </div>
     </div>
 </header>
-<style>
-    /
-    /
-    Quote slider
-    .quote-slider-wrapper {
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
 
-    .quote-slider {
-        height: 100vh;
-    }
 
-    .quote-text-wrap {
-        display: flex;
-        height: 100%;
-    }
-
-    .quote-text {
-        max-width: 500px;
-        align-self: center;
-        margin: 0 10%;
-        font-size: 24px;
-    }
-
-    .quote-text {
-        transition: all 0.3s;
-    }
-
-    .swiper-slide.swiper-slide-next .quote-text,
-    .swiper-slide.swiper-slide-prev .quote-text {
-        opacity: 0;
-    }
-
-    .swiper-slide.swiper-slide-active .quote-text {
-        opacity: 1;
-    }
-
-    .image-slider-wrapper {
-        position: relative;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
-        max-width: 50%;
-        background-color: #f1f1f1;
-    }
-
-    .image-slider {
-        height: 100vh;
-    }
-
-    .swiper-slide {
-    / / for custom transition position: relative;
-        overflow: hidden;
-    }
-
-    .swiper-slide-inner {
-    / / for custom transition position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
-    }
-    .ipad-slider {
-        display: flex;
-    }
-</style>
 <main class="main ">
 
     <section class="s-introduce mb-180 --relative">
         <div class="container --relative">
             <img src="assets/img/decor.svg" alt="" class="decor-large">
+
+
             <div class="row">
-                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-11 col-xs-12">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="kama_breadcrumbs">
-                        <p id="breadcrumbs"><span><span><a href="https://www.silk.lviv.ua/">Головна</a></span> &nbsp;/&nbsp; <span
-                                class="breadcrumb_last" aria-current="page">О нас</span></span></p></div>
+                    <span>
+                        <a href="">
+                            <span>Главная</span>
+                        </a>
+                    </span>
+                        <span class="kb_sep"><i class="icon-ar-forward"></i></span>
+                        <span class="kb_title">О нас</span>
+                    </div>
                 </div>
             </div>
+
+
             <div class="row m-row">
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
                     <div class="heading text-bold text-xl --relative decor">
@@ -223,7 +161,7 @@
 
     <section class="s-values mb-180">
         <div class="container">
-            <div class="row align-middle">
+            <div class="row m-row align-middle">
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
                     <h3 class="heading decor text-xl text-bold --relative mb-32">Наши ценности</h3>
                 </div>
@@ -282,130 +220,98 @@
     </section>
 
 
-    <section class="s-history swiper-entry --relative">
+    <section class="s-history mb-180">
         <div class="container">
 
-            <div class="swiper-container"
-                 data-options='{"slidesPerView":1, "direction": "horizontal" , "spaceBetween": 0, "speed": 1200, "centeredSlides": false, "loop": true,"customFraction": true}'>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-
-                        <div class="row m-row">
-                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column --relative">
-                                <div class="history__item d-flex align-center">
-                                    <div class="partner__img-wrap">
-                                        <img src="assets/img/news-1.png" alt="" class="partner__img">
-                                    </div>
+            <div class="row m-row">
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column --relative">
+                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative d-block d-md-none">
+                        Наша история
+                    </div>
+                    <div class="swiper-container gallery-top --relative">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="history-img__wrap">
+                                    <img src="assets/img/news-1.png" alt="" class="history-img">
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
-                                <div class="s-history__inner">
-                                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative">
-                                        Наша история
-                                    </div>
-                                    <div class="title">Наш последний проект</div>
-                                    <div class="description editor-style">
-                                        <p> KwanGroup — девелоперская компания, стремящаяся воплотить идеи в
-                                            реальность.</p>
-                                        <p>Стремясь к совершенству и инновациям, мы специализируемся на создании
-                                            знаковых
-                                            жилых,
-                                            коммерческих и многофункциональных объектов, которые меняют городские
-                                            ландшафты.</p>
-                                    </div>
-                                    <a href="" class="btn btn-more">Подробнее<i class="icon-right"></i> </a>
+                            <div class="swiper-slide">
+                                <div class="history-img__wrap">
+                                    <img src="assets/img/news-2.png" alt="" class="history-img">
                                 </div>
-                                <div class="d-flex align-end align-left fraction__wrap">
-                                    <div class="custom-current fraction__current text-bold"></div>
-                                    <div class="custom-total fraction__total --relative"></div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="history-img__wrap">
+                                    <img src="assets/img/news-3.png" alt="" class="history-img">
                                 </div>
-
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="row m-row">
-                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column --relative">
-                                <div class="history__item d-flex align-center">
-                                    <div class="partner__img-wrap">
-                                        <img src="assets/img/news-1.png" alt="" class="partner__img">
-                                    </div>
-                                </div>
+                        <div class="swiper-button__wrap d-flex align-left">
+                            <div class="swiper-button-prev d-flex align-left align-middle text-s text-medium">
+                                <i class="icon-ar-left"></i> Назад
                             </div>
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
-                                <div class="s-history__inner">
-                                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative">
-                                        Наша история
-                                    </div>
-                                    <div class="title">Наш последний проект</div>
-                                    <div class="description editor-style">
-                                        <p> KwanGroup — девелоперская компания, стремящаяся воплотить идеи в
-                                            реальность.</p>
-                                        <p>Стремясь к совершенству и инновациям, мы специализируемся на создании
-                                            знаковых
-                                            жилых,
-                                            коммерческих и многофункциональных объектов, которые меняют городские
-                                            ландшафты.</p>
-                                    </div>
-                                    <a href="" class="btn btn-more">Подробнее<i class="icon-right"></i> </a>
-                                </div>
-                                <div class="d-flex align-end align-left fraction__wrap">
-                                    <div class="custom-current fraction__current text-bold"></div>
-                                    <div class="custom-total fraction__total --relative"></div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-
-                        <div class="row m-row">
-                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column --relative">
-                                <div class="history__item d-flex align-center">
-                                    <div class="partner__img-wrap">
-                                        <img src="assets/img/news-1.png" alt="" class="partner__img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
-                                <div class="s-history__inner">
-                                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative">
-                                        Наша история
-                                    </div>
-                                    <div class="title">Наш последний проект</div>
-                                    <div class="description editor-style">
-                                        <p> KwanGroup — девелоперская компания, стремящаяся воплотить идеи в
-                                            реальность.</p>
-                                        <p>Стремясь к совершенству и инновациям, мы специализируемся на создании
-                                            знаковых
-                                            жилых,
-                                            коммерческих и многофункциональных объектов, которые меняют городские
-                                            ландшафты.</p>
-                                    </div>
-                                    <a href="" class="btn btn-more">Подробнее<i class="icon-right"></i> </a>
-                                </div>
-                                <div class="d-flex align-end align-left fraction__wrap">
-                                    <div class="custom-current fraction__current text-bold"></div>
-                                    <div class="custom-total fraction__total --relative"></div>
-                                </div>
-
+                            <div class="swiper-button-next d-flex align-right align-middle text-s text-medium">
+                                Дальше <i class="icon-ar-right"></i>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
+                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative d-none d-md-block">
+                        Наша история
+                    </div>
+                    <div class="swiper-container gallery-bottom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="history__item">
+                                    <div class="history__year text-m text-bold">2006</div>
+                                    <div class="history__name text-s text-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="description editor-style">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitatio...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="history__item">
+                                    <div class="history__year text-m text-bold">2009</div>
+                                    <div class="history__name text-s text-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="description editor-style">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitatio...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="history__item">
+                                    <div class="history__year text-m text-bold">2024</div>
+                                    <div class="history__name text-s text-bold">Lorem ipsum dolor sit amet</div>
+                                    <div class="description editor-style">
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitatio...
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            quis nostrud exercitatio...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
 
+                   <!-- <div class="d-flex align-end align-left fraction__wrap">
+                        <div class="custom-current fraction__current text-bold"></div>
+                        <div class="custom-total fraction__total --relative"></div>
+                    </div>-->
 
-            <div class="swiper-button__wrap d-flex align-left">
-                <div class="swiper-button-prev d-flex align-left align-middle text-s text-medium">
-                    <i class="icon-ar-left"></i> Назад
-                </div>
-                <div class="swiper-button-next d-flex align-right align-middle text-s text-medium">
-                    Дальше <i class="icon-ar-right"></i>
                 </div>
             </div>
+
+
+
 
         </div>
     </section>
@@ -721,76 +627,106 @@
             <div id="map" class="s-contacts__map"></div>
         </div>
     </section>
+    <!--
 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="project-detail-slider">
+                        <div class="swiper-thumbs row">
+                            <div class="swiper-entry ">
+                                <div class="swiper-container swiper-thumbs-top"
+                                     data-options='{"slidesPerView":1, "customFraction": true, "spaceBetween":15, "watchSlidesVisibility": true,  "watchSlidesProgress": true, "breakpoints":{"991":{"autoHeight": 1} }}'>
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="image">
+                                                <div class="bg bg-lazy-load"
+                                                     style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-740x550.jpg);"
+                                                     data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-740x550.jpg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="image">
+                                                <div class="bg bg-lazy-load"
+                                                     style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg);"
+                                                     data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="image">
+                                                <div class="bg bg-lazy-load"
+                                                     style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-740x550.jpg);"
+                                                     data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-740x550.jpg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="image">
+                                                <div class="bg bg-lazy-load"
+                                                     style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg);"
+                                                     data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button__wrap">
+                                    <div class="swiper-button-prev d-flex align-center align-middle">
+                                        <i class="icon-ar-left"></i>
+                                    </div>
+                                    <div class="swiper-button-next d-flex align-center align-middle">
+                                        <i class="icon-ar-right"></i>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-end align-left fraction__wrap">
+                                    <div class="custom-current fraction__current text-bold"></div>
+                                    <div class="custom-total fraction__total --relative"></div>
+                                </div>
+                            </div>
+                            <div class="swiper-preview ">
+                                <div class="swiper-entry">
 
-    <div class="ipad-slider">
-
-        <div class="quote-slider-wrapper">
-            <div class="swiper-container quote-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="quote-text-wrap">
-                            <div class="quote-text">
-                                Harry Potter is a series of fantasy literature written by British author J. K. Rowling.
-                                The novels chronicle the life of a young wizard, Harry Potter, and his friends Hermione
-                                Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and
-                                Wizardry.
+                                    <div class="swiper-container swiper-thumbs-bottom"
+                                         data-options='{"slidesPerView":2, "spaceBetween":20, "watchSlidesVisibility": true, "centerInsufficientSlides": true, "watchSlidesProgress": true,   "direction": "vertical"}'>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="project-preview">
+                                                    <div class="bg bg-lazy-load"
+                                                         style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-105x70.jpg);"
+                                                         data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-105x70.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="project-preview">
+                                                    <div class="bg bg-lazy-load"
+                                                         style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg);"
+                                                         data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-105x70.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="project-preview">
+                                                    <div class="bg bg-lazy-load"
+                                                         style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-105x70.jpg);"
+                                                         data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/H-scaled-105x70.jpg"></div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="project-preview">
+                                                    <div class="bg bg-lazy-load"
+                                                         style="background-image: url(https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-740x550.jpg);"
+                                                         data-bg="https://finhubfund.co.uk/wp-content/uploads/2020/04/T2-scaled-105x70.jpg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="quote-text-wrap">
-                            <div class="quote-text">
-                                Jason Bourne is a fictional character and the protagonist of a series of novels by
-                                Robert Ludlum and subsequent film adaptations. He first appeared in the novel The Bourne
-                                Identity (1980), which was adapted for television in 1988. Chiang Mai sometimes written
-                                as "Chiengmai" or "Chiangmai", is the largest and most culturally significant city in
-                                Northern Thailand.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="quote-text-wrap">
-                            <div class="quote-text">
-                                Chiang Mai sometimes written as "Chiengmai" or "Chiangmai", is the largest and most
-                                culturally significant city in Northern Thailand.
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
+    -->
 
-
-        <div class="image-slider-wrapper">
-            <div class="swiper-container image-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-inner" data-swiper-parallax="50%">
-                            <img class="swiper-lazy" src="https://source.unsplash.com/gOApUyqOo-c/20x10"
-                                 data-src="https://source.unsplash.com/gOApUyqOo-c/1200x900"/>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-inner" data-swiper-parallax="50%">
-                            <img class="swiper-lazy" src="https://source.unsplash.com/Rcs5zylYqMc/20x10"
-                                 data-src="https://source.unsplash.com/Rcs5zylYqMc/1200x900"/>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-inner" data-swiper-parallax="50%">
-                            <img class="swiper-lazy" src="https://source.unsplash.com/vXPF8MmN2FA/20x10"
-                                 data-src="https://source.unsplash.com/vXPF8MmN2FA/1200x900"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-    </div>
 </main>
 
 <footer class="footer">
@@ -867,47 +803,10 @@
         </div>
     </div>
 </footer>
+
 <script src="./assets/js/jquery-3.7.0.min.js"></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
-<!--
-<script>
-    var galleryThumbs = new Swiper(".gallery-thumbs", {
-        centeredSlides: true,
-        centeredSlidesBounds: true,
-        slidesPerView: 4,
-        watchOverflow: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        direction: 'vertical'
-    });
-
-    var galleryMain = new Swiper(".gallery-main", {
-        watchOverflow: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        preventInteractionOnTransition: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        thumbs: {
-            swiper: galleryThumbs
-        }
-    });
-
-    galleryMain.on('slideChangeTransitionStart', function () {
-        galleryThumbs.slideTo(galleryMain.activeIndex);
-    });
-
-    galleryThumbs.on('transitionStart', function () {
-        galleryMain.slideTo(galleryThumbs.activeIndex);
-    });
-</script>-->
 
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key="
         type="text/javascript"></script>
@@ -1013,36 +912,42 @@
 </script>
 
 <script>
-    var quoteSwiper = new Swiper('.quote-slider', {
-        direction: "horizontal",
-        effect: "slide",
-        //autoHeight: true,
-        loop: false, // Not recommended to enable!!!
-        allowTouchMove: false,
-    });
-
-
-    var $Speed = 1000;
-
-    var imageSwiper = new Swiper('.image-slider', {
-        mousewheel: true,
-        speed: $Speed,
-        loop: false, // Not recommended to enable!!!
-        longSwipesRatio: 0.01,
-        followFinger: false,
-        grabCursor: true,
-        watchSlidesProgress: true,
-        parallax: true,
-        lazy: {
-            loadPrevNext: true,
-        },
+    const sliderTop = new Swiper(".gallery-top", {
+        spaceBetween: 0,
+        centeredSlides: true,
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        }
+            nextEl: ".gallery-top .swiper-button-next",
+            prevEl: ".gallery-top .swiper-button-prev"
+        },
+        initialSlide: 1,
+        breakpoints: {
+            300: {
+                slidesPerView: 1
+            },
+            1100: {
+                slidesPerView: 1
+            },
+            1650: {
+                slidesPerView: 1
+            }
+        },
+        loop: true,
+        loopedSlides: 3,
+        slideToClickedSlide: true
     });
 
-    imageSwiper.controller.control = this.quoteSwiper;
+    const sliderBottom = new Swiper(".gallery-bottom", {
+        initialSlide: 1,
+        centeredSlides: true,
+        autoHeight: true,
+        loop: true,
+        loopedSlides: 3
+    });
+
+    sliderTop.controller.control = sliderBottom;
+    sliderBottom.controller.control = sliderTop;
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,124 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.s-news {
+  & .article {
+    &__item {
+      margin-bottom: 40px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &__info {
+      padding: 24px 0 0 20px;
+      @media (max-width: $breakpoint-md) {
+        padding: 10px 0 0 12px;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &-wrap {
+        padding-bottom: 100%;
+
+        &.--half {
+          padding-bottom: 62%;
+        }
+      }
+    }
+
+    &__date {
+      margin-bottom: 24px;
+      color: #8D8D8D;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 12px;
+      }
+
+      &:before {
+        content: '';
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #000;
+        @media (max-width: $breakpoint-md) {
+          left: -12px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 18px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__text {
+      &:not(&.--large) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 18px;
+      }
+    }
+
+    &__btn {
+      color: #A59389;
+      @include fontSize(14, 16);
+
+      & i {
+        padding-left: 12px;
+        font-size: 10px;
+        @include transition(.5);
+      }
+
+      &:hover {
+        & i {
+          padding-left: 22px;
+        }
+      }
+    }
+  }
+
+  & .blog-main {
+    margin-bottom: 32px;
+
+    &__info {
+      padding-left: 20px;
+      @media (max-width: $breakpoint-md) {
+        padding-left: 12px;
+        padding-top: 12px;
+      }
+    }
+
+    & .article {
+      &__date {
+        margin-bottom: 42px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 12px;
+        }
+      }
+
+      &__title {
+        margin-bottom: 32px;
+        @media (max-width: $breakpoint-md) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+

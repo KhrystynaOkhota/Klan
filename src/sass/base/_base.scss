@@ -193,6 +193,12 @@ body {
 
   }
 
+  &-button {
+    &__wrap {
+      cursor: auto;
+    }
+  }
+
   &-button-next, &-button-prev {
     @include transition(.4);
     width: auto;
@@ -201,29 +207,38 @@ body {
     color: #fff;
 
     & i {
-      font-size: 15px;
-      @include fontSize(10, 15);
+      font-size: 12px;
       font-weight: 300;
-      color: $accentColor;
+      color: #fff;
       @include transition(.5);
     }
-
-
     &:after {
       display: none;
-    }
-
-    &:hover {
-      border-color: #FB0;
-
-      & i {
-        color: #FB0;
-      }
     }
   }
 
   &-button-next {
+    & i {
+      padding-left: 8px;
+    }
 
+    &:hover {
+      & i {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  &-button-prev {
+    & i {
+      padding-right: 8px;
+    }
+
+    &:hover {
+      & i {
+        transform: translateX(-10px);
+      }
+    }
   }
 }
 

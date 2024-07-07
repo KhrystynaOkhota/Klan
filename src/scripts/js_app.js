@@ -272,73 +272,18 @@ jQuery(function ($) {
         _functions.closePopup();
     });
 
-
-    $(window).scroll(function () {
-        _functions.scrollCall();
-    });
-    var prev_scroll = 0;
-    _functions.scrollCall = function () {
-        winScr = $(window).scrollTop();
-        if (winScr > prev_scroll) {
-            $('header').addClass('header__hidden');
-            $('.menu-item').removeClass('active');
-        } else {
-            $('header').removeClass('header__hidden');
-
-        }
-        prev_scroll = winScr;
-        if (winScr <= 10) {
-            $('header').removeClass('header__hidden');
-            prev_scroll = 0;
-        }
-    }
-
-   /* _functions.coolNav = function () {
+    _functions.coolNav = function () {
         let r = $("header");
         $(window).on("scroll", (function () {
-                $(window).scrollTop() > 100 ? r.addClass("fixed-top") : r.removeClass("fixed-top")
+                $(window).scrollTop() > 30 ? r.addClass("fixed-top") : r.removeClass("fixed-top")
             }
         ));
     };
     _functions.coolNav();
-*/
-
-
-    _functions.coolNav = function () {
-
-
-        let n = $(".no-touch .menu >  .menu-item > a"), i = $(".no-touch .menu"), r = $("header");
-        n.mouseenter((function () {
-                r.removeClass("open-dropdown"),
-                    n.parent().removeClass("active"),
-                    $(this).parent().addClass("active"),
-                $(this).parent().hasClass("menu-item-has-children") && r.addClass("open-dropdown")
-            }
-        )),
-            i.mouseleave((function () {
-                    n.parent().removeClass("active"),
-                        r.removeClass("open-dropdown")
-                }
-            )),
-
-            /// $(".touchevents .menu-item-has-children > a").on("click", (function () {
-            ///  alert("ghgjhj");
-            //  }
-            //  ));
-            $(window).on("scroll", (function () {
-                    $(window).scrollTop() > 100 ? r.addClass("fixed-top") : r.removeClass("fixed-top")
-                }
-            ));
-
-    };
-    _functions.coolNav();
 
 
 
-    if ($('.select-box').length) {
 
-        $('select').SumoSelect();
-    }
 
 });
 

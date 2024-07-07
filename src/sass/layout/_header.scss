@@ -39,7 +39,7 @@
     position: relative;
 
     @media (max-width: $breakpoint-lg) {
-      padding: 15px 0;
+      padding: 24px 0 26px 0;
     }
   }
 
@@ -51,6 +51,7 @@
       }
       @media (max-width: $breakpoint-lg) {
         width: 143px;
+        height: 32px;
       }
     }
   }
@@ -75,9 +76,13 @@
       position: relative;
       cursor: pointer;
 
+      & a, & i {
+        font-weight: 600;
+      }
+
       & i {
         font-size: 14px;
-        padding-left: 5px;
+        padding-left: 8px;
       }
     }
 
@@ -92,16 +97,15 @@
       @media (max-width: $breakpoint-xl) {
         margin-left: 25px;
       }
-      @media (max-width: $breakpoint-sm) {
-        margin: 0 0 40px 0;
+      @media (max-width: $breakpoint-lg) {
+        padding: 32px 15px;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
       }
 
       a {
         color: #000;
         @include fontSize(16, 18);
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         text-transform: uppercase;
         @include transition(.5);
 
@@ -125,24 +129,43 @@
   }
 
   & .navbar {
+    @media (min-width: $breakpoint-lg) {
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    @media (max-width: $breakpoint-lg) {
+      height: calc(100vh - 80px);
+      background-color: #fff;
+      position: fixed;
+      top: 80px;
+      transition: all 1.2s ease;
+      z-index: 2;
+      width: 100%;
+      right: -100%;
+      overflow: auto;
 
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+      &.is-visible {
+        right: 0;
+        transition: all .5s ease;
+      }
+    }
 
     &__phone {
       @include fontSize(16, 18);
+      display: block;
       @media (max-width: $breakpoint-lg) {
-        margin-bottom: 24px;
+        padding: 32px 15px;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
       }
 
     }
@@ -152,14 +175,11 @@
         height: 100%;
       }
       @media (max-width: $breakpoint-lg) {
-        padding: 0 16px 20px 16px;
-        text-align: center;
         margin: 0;
       }
 
       &-item {
         display: inline-block;
-
         height: 100%;
         margin-right: 57.8px;
         @media (max-width: $breakpoint-xl) {
@@ -174,7 +194,7 @@
 
         & + .menu-item {
           @media (max-width: $breakpoint-lg) {
-            margin: 25px 0 0 0;
+            margin: 0;
           }
         }
 
@@ -188,68 +208,64 @@
           position: relative;
           display: block;
           @media (max-width: $breakpoint-lg) {
-            padding: 0 0 10px 0;
+            padding: 32px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
           }
-
-          &:after {
-            content: '';
-            width: 0;
-            height: 1px;
-            background-color: #000;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            @include transition(.5);
+          @media (min-width: $breakpoint-lg) {
+            &:after {
+              content: '';
+              width: 0;
+              height: 1px;
+              background-color: #000;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              @include transition(.5);
+            }
           }
         }
 
         &:hover, &.current-menu-item {
           & > a {
-            &:after {
-              width: 40px;
-              @include transition(.5);
+            @media (min-width: $breakpoint-lg) {
+              &:after {
+                width: 40px;
+                @include transition(.5);
+              }
             }
           }
         }
 
         &.current-menu-item {
           & > a {
-            font-weight: 500;
+            font-weight: 600;
           }
         }
       }
     }
 
-    @media (max-width: $breakpoint-lg) {
+  }
 
+  &.bg {
+    & a {
+      color: #000;
+    }
 
-      height: calc(100vh - 79px);
-      background-color: #fff;
-      position: fixed;
-      top: 79px;
-      transition: all 1.2s ease;
-      z-index: 2;
-      width: 100%;
-      right: -100%;
-      padding: 0 16px 65px 16px;
-      overflow: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .navbar__phone {
+      color: #000;
+    }
 
-      &.is-visible {
-        right: 0;
-        transition: all .5s ease;
-      }
+    .lang a {
+      color: #000;
     }
   }
 }
 
 .burger {
   &__wrap {
-    width: 50px;
-    height: 50px;
+    width: 28px;
+    height: 18px;
     border-radius: 0;
     display: none;
     @media (max-width: $breakpoint-lg) {

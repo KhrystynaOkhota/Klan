@@ -105,6 +105,7 @@
           height: 32px;
           margin-bottom: 18px;
         }
+
         &:after {
           content: '';
           width: 2px;
@@ -147,13 +148,30 @@
   .title {
     margin-bottom: 12px;
   }
-  & .description{
+
+  & .description {
     margin-bottom: 24px;
   }
 }
 
 .s-history {
-  margin-bottom: 180px;
+
+
+  & .heading {
+    margin-bottom: 44px;
+  }
+
+  .gallery-top {
+    @media (max-width: $breakpoint-md) {
+      height: auto;
+    }
+  }
+
+  .gallery-bottom {
+    @media (max-width: $breakpoint-md) {
+      margin-top: 55px;
+    }
+  }
 
   & .swiper-button {
     &-prev {
@@ -167,10 +185,13 @@
     &__wrap {
       position: absolute;
       bottom: 0;
-      right: 10px;
+      right: 0;
       padding: 36px;
 
       z-index: 2;
+      @media (max-width: $breakpoint-md) {
+        padding: 24px;
+      }
 
       &:after {
         content: "";
@@ -198,11 +219,37 @@
     }
   }
 
+  .history {
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      &__wrap {
+        position: relative;
+        padding-bottom: 62%;
+        min-height: 228px;
+      }
+    }
+
+    &__year {
+      margin-bottom: 18px;
+    }
+
+    &__name {
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      padding-left: 20px;
+    }
+  }
 }
 
 .s-team {
-
-
   &__top {
     margin-bottom: 44px;
   }
@@ -214,7 +261,7 @@
         @media (max-width: $breakpoint-md) {
           margin-top: 40px;
         }
-        @media (max-width:375px) {
+        @media (max-width: 375px) {
           margin-top: 0;
         }
       }
