@@ -29,7 +29,8 @@
     <span></span>
 </div>
 
-<header class="header transparent">
+<header class="header js-header transparent">
+    <!-- додати ці класи ===  js-header transparent ==== тільки на головну сторінку-->
     <div class=" container">
         <div class="header__inner d-flex align-middle align-justify">
             <a href="index.html" class="logo__wrap">
@@ -47,7 +48,7 @@
             <div class="navbar">
                 <nav class="navbar__menu">
                     <ul class="menu">
-                        <li class="menu-item  current-menu-item">
+                        <li class="menu-item ">
                             <a href="about.html">О нас</a>
                         </li>
                         <li class="menu-item">
@@ -64,11 +65,12 @@
                 </nav>
 
 
-                <a href="tel:000000000000" target="_blank" class="navbar__phone text-s text-semibold">+0 000 000 00 00</a>
+                <a href="tel:000000000000" target="_blank" class="navbar__phone text-s text-semibold">+0 000 000 00
+                    00</a>
 
                 <div class="lang__wrap --relative">
-                    <div class="lang__current">
-                        <a href="/ru/">RU</a><!--поточна мова-->
+                    <div class="lang__current d-flex align-middle">
+                        <a href="/ru/">RU</a> <i class="icon-ar-bottom"></i> <!--поточна мова-->
                     </div>
 
                     <ul class="lang">
@@ -197,12 +199,12 @@
         </div>
     </section>
 
-    <section class="s-about --relative">
+    <section class="s-about mb-180 --relative">
         <div class="container">
 
             <div class="row m-row benefit__wrap align-middle">
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
-                    <div class="heading text-semibold text-l --relative benefit__heading">
+                    <div class="text-semibold text-l --relative benefit__heading">
                         Ценности бренда:
                     </div>
                 </div>
@@ -239,7 +241,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
                     <div class="s-about__inner">
-                        <div class="heading decor p-0 text-bold text-xl mb-32 --relative">
+                        <div class="heading decor no-margin p-0 text-bold text-xl mb-32 --relative">
                             O нас
                         </div>
                         <div class="description editor-style">
@@ -247,7 +249,7 @@
                             <p>Стремясь к совершенству и инновациям, мы специализируемся на создании знаковых жилых,
                                 коммерческих и многофункциональных объектов, которые меняют городские ландшафты.</p>
                         </div>
-                        <a href="" class="btn btn-more">Подробнее<i class="icon-right"></i> </a>
+                        <a href="" class="btn btn-primary">Подробнее<i class="icon-right"></i> </a>
                     </div>
                 </div>
             </div>
@@ -257,18 +259,25 @@
     <section class="section s-portfolio home mb-180">
         <div class="container">
             <div class="row m-row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column s-portfolio__column">
-                    <div>
-                        <h3 class="heading decor text-bold text-xl --relative">Портфолио</h3>
-                        <h4 class="project__heading text-bold --relative">Наш последний проект</h4>
-                        <div class="project__description text-s pl-20">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum.
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
+                    <div class="project__info">
+
+
+                        <div>
+                            <h3 class="heading decor no-margin text-bold text-xl --relative">Портфолио</h3>
+                            <h4 class="project__heading text-m text-bold --relative">Наш последний проект</h4>
+                            <div class="project__description text-s">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in
+                                voluptate velit esse cillum.
+                            </div>
                         </div>
+                        <a href="portfolio.html" class="btn btn-primary">Все проекты <i class="icon-right"></i> </a>
                     </div>
-                    <a href="portfolio.html" class="btn btn-primary">Все проекты <i class="icon-right"></i> </a>
                 </div>
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column">
                     <div class="gallery__wrap">
@@ -384,7 +393,8 @@
             <div class="row s-news__top mb-32">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex align-justify align-middle">
                     <h3 class="heading text-bold decor text-xl --relative">Последние новости </h3>
-                    <a href="" class="btn btn-primary  d-none d-md-inline-block">Все новости<i class="icon-right"></i> </a>
+                    <a href="" class="btn btn-primary  d-none d-md-inline-block">Все новости<i class="icon-right"></i>
+                    </a>
                 </div>
             </div>
             <div class="row m-row blog-main">

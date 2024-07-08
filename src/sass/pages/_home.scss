@@ -277,10 +277,12 @@
 }
 
 .s-about {
-  margin-bottom: 180px;
 
   &__inner {
     padding-left: 20px;
+    @media (max-width: $breakpoint-md) {
+      padding-left: 12px;
+    }
   }
 
   & .heading {
@@ -301,12 +303,27 @@
 
     &-wrap {
       padding-bottom: 62%;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 24px;
+      }
     }
   }
 
   & .benefit {
+    &__heading {
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 32px;
+      }
+    }
+
     &__wrap {
       margin-bottom: 32px;
+
+      & .column {
+        &:not(&:last-child) {
+          margin-bottom: 18px;
+        }
+      }
     }
 
     &__icon {
@@ -314,6 +331,10 @@
       height: 44px;
       object-fit: contain;
       object-position: center;
+      @media (max-width: $breakpoint-md) {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     &__item {
@@ -321,7 +342,9 @@
       grid-template-columns: 44px 1fr;
       gap: 10.5px;
       padding: 0 10px 0 20px;
-
+      @media (max-width: $breakpoint-md) {
+    padding-left: 12px;
+      }
       &:after {
         content: '';
         width: 2px;

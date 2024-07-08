@@ -59,7 +59,7 @@
 
   &-s {
     @include fontSize(14, 16);
-    line-height: 1.22;
+    line-height: 1.4;
   }
 }
 .icon-ar-forward:before {
@@ -88,7 +88,13 @@
 
 .heading {
   &.decor {
-    margin-left: 20px;
+    &:not(.no-margin){
+      margin-left: 20px;
+      @media (max-width: $breakpoint-md) {
+        margin-left: 12px;
+      }
+    }
+
 
     &:after {
       content: '';
@@ -100,6 +106,9 @@
       transform: translateY(-50%);
 
       background-color: #A59389;
+      @media (max-width: $breakpoint-md) {
+        left: -12px;
+      }
     }
   }
 

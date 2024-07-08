@@ -176,6 +176,7 @@
   & .swiper-button {
     &-prev {
       padding-right: 32px;
+
     }
 
     &-next {
@@ -205,17 +206,6 @@
         background-color: rgba(255, 255, 255, 0.2);
         z-index: -1;
       }
-
-      &:before {
-        content: '';
-        height: 13px;
-        width: 1px;
-        background-color: rgba(255, 255, 255, .2);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
     }
   }
 
@@ -231,7 +221,10 @@
       &__wrap {
         position: relative;
         padding-bottom: 62%;
-        min-height: 228px;
+        min-height: 580px;
+        @media (max-width: $breakpoint-md) {
+          min-height: 228px;
+        }
       }
     }
 
@@ -245,6 +238,9 @@
 
     &__item {
       padding-left: 20px;
+      @media (max-width: $breakpoint-md) {
+        padding-left: 0;
+      }
     }
   }
 }

@@ -273,9 +273,9 @@ jQuery(function ($) {
     });
 
     _functions.coolNav = function () {
-        let r = $("header");
+        let r = $(".js-header");
         $(window).on("scroll", (function () {
-                $(window).scrollTop() > 30 ? r.addClass("fixed-top") : r.removeClass("fixed-top")
+                $(window).scrollTop() > 30 ? r.removeClass("transparent")  : r.addClass("transparent")
             }
         ));
     };
