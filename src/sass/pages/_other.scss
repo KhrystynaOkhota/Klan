@@ -20,6 +20,12 @@
     }
   }
 
+  &__content {
+    padding-left: 20px;
+    @media (max-width: $breakpoint-md) {
+      padding-left: 12px;
+    }
+  }
 
   &__inner {
     height: 100vh;
