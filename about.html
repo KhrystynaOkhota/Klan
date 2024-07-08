@@ -225,7 +225,7 @@
 
             <div class="row m-row">
                 <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 column --relative">
-                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative d-block d-md-none">
+                    <div class="heading decor text-bold text-xl mb-32 --relative d-block d-md-none">
                         Наша история
                     </div>
                     <div class="swiper-container gallery-top --relative">
@@ -254,10 +254,12 @@
                                 Дальше <i class="icon-ar-right"></i>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12 column">
-                    <div class="heading decor no-margin text-bold text-xl mb-32 --relative d-none d-md-block">
+                    <div class="heading decor text-bold text-xl mb-32 --relative d-none d-md-block">
                         Наша история
                     </div>
                     <div class="swiper-container gallery-bottom">
@@ -300,7 +302,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="swiper-pagination"></div>
 
                    <!-- <div class="d-flex align-end align-left fraction__wrap">
                         <div class="custom-current fraction__current text-bold"></div>
@@ -813,6 +815,13 @@
         navigation: {
             nextEl: ".gallery-top .swiper-button-next",
             prevEl: ".gallery-top .swiper-button-prev"
+        },
+        pagination: {
+            el: '.s-history .swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return '0' + number;
+            }
         },
         initialSlide: 1,
         breakpoints: {

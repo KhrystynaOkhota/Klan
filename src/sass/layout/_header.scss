@@ -75,6 +75,13 @@
     }
   }
 
+  &__contacts {
+    @media (max-width: $breakpoint-md) {
+      padding: 32px 15px;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+  }
+
   & .lang {
     position: absolute;
     display: inline;
@@ -90,7 +97,11 @@
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 4px 20px 0px rgba(160, 160, 160, 0.25);
-
+    @media (max-width: $breakpoint-md) {
+      -webkit-transform: none;
+      transform: none;
+      left: 1px;
+    }
     &__current {
       position: relative;
       cursor: pointer;
@@ -144,7 +155,23 @@
           -webkit-transform: translate(-50%, 10px);
           transform: translate(-50%, 10px);
           z-index: 5;
+          @media (max-width: $breakpoint-md) {
+            -webkit-transform: none;
+            left: 1px;
+            top: calc(100% - 26px);
+          }
         }
+      }
+    }
+  }
+
+  & .social {
+    &__item {
+      width: 24px;
+      height: 24px;
+
+      &:not(&:last-child) {
+        margin-right: 12px;
       }
     }
   }
@@ -181,14 +208,12 @@
       }
     }
 
+
     &__phone {
       @include fontSize(16, 18);
       display: block;
       @include transition(.5);
-      @media (max-width: $breakpoint-lg) {
-        padding: 32px 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, .2);
-      }
+
 
     }
 

@@ -1,11 +1,38 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.fraction {
+  &__wrap {
+
+  }
+
+  &__current {
+    @include fontSize(60, 80);
+    line-height: 1;
+    color: #A59389;
+  }
+
+  &__total {
+    color: #000000;
+    margin-bottom: 6px;
+
+    &:before {
+      content: '/';
+    }
+  }
+}
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* MAIN SLIDER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .s-main {
+  & .container {
+    @media (max-width: 1120px) {
+      padding: 0;
+    }
+  }
+
   &__row {
     @media (max-width: $breakpoint-md) {
       flex-direction: column-reverse;
@@ -14,13 +41,16 @@
   }
 
   &__slider {
-    margin-right: calc((-100vw + 100%) / 2);
+    @media (min-width: 1120px) {
+      margin-right: calc((-100vw + 100%) / 2);
+    }
     position: relative;
     @media (min-width: $breakpoint-lg) {
       &:after, &:before {
         content: '';
         width: 180px;
         height: 180px;
+        left: -3px;
         background-color: #fff;
         display: block;
         position: absolute;
@@ -28,59 +58,181 @@
       }
 
       &:before {
-        top: 0;
+        top: -3px;
       }
 
       &:after {
-        bottom: 0;
+        bottom: -3px;
       }
     }
   }
 
   & .social {
-    &__title {
-      transform: rotate(-90deg);
-    }
+    @media (max-width: $breakpoint-md) {
 
-    &__wrap {
-      @media (min-width: $breakpoint-lg) {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      &__item{
+        &:not(&:last-child){
+          margin-right: 12px;
+        }
+      }
+      &__wrap {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row wrap;
+        padding: 24px 15px 0 15px;
+      }
+      &__title{
+
+      }
+    }
+    @media (min-width: $breakpoint-md) {
+      &__title {
+        position: relative;
+        width: 30px;
+
+        & > span {
+          display: block;
+          width: max-content;
+          position: absolute;
+          right: 6px;
+          top: 0;
+          white-space: nowrap;
+          transform: rotate(-90deg);
+          -webkit-transform: rotate(-90deg);
+          transform-origin: 100% 100%;
+          -webkit-transform-origin: 100% 100%;
+          margin-top: -19px;
+        }
+      }
+
+      &__wrap {
+
         height: calc(100vh - 360px);
         margin-top: 180px;
         display: grid;
         align-content: space-between;
+        justify-content: center;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 1px;
+          height: calc(100% - 331px);
+          background-color: red;
+          position: absolute;
+          bottom: 127px;
+          top: 204px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
       }
-    }
 
-    &__item {
-      & + .social__item {
-        margin-top: 24px;
-      }
+      &__item {
+        & + .social__item {
+          margin-top: 24px;
+        }
 
-      & a {
-        display: block;
+        & a {
+          display: block;
 
-        & img {
+          & img {
 
+          }
         }
       }
+
     }
   }
 
   & .fraction {
     &__wrap {
       position: absolute;
-      bottom: 0;
+      bottom: 23px;
+      left: 15px;
       z-index: 4;
+      @media (max-width: $breakpoint-md) {
+        bottom: 105px;
+      }
     }
 
     &__total {
-
+      @media (max-width: $breakpoint-md) {
+        color: #FFFFFF;
+      }
     }
 
     &__current {
       margin-right: 28px;
     }
   }
+
+  & .swiper {
+    &-button {
+      &-prev {
+        padding-right: 32px;
+        @media (max-width: $breakpoint-md) {
+          width: 50%;
+          padding: 0;
+        }
+      }
+
+      &-next {
+        padding-left: 32px;
+        @media (max-width: $breakpoint-md) {
+          width: 50%;
+          padding: 0;
+        }
+      }
+
+      &__wrap {
+        position: absolute;
+        bottom: 0;
+        left: 180px;
+        padding: 36px;
+
+        z-index: 2;
+        @media (max-width: $breakpoint-md) {
+
+          width: calc(100% - 30px);
+          left: 15px;
+
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(13px);
+          -webkit-backdrop-filter: blur(13px);
+          background-color: rgba(255, 255, 255, 0.2);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+
 }
 
 .main-slide {
@@ -89,18 +241,45 @@
   width: 100%;
   height: 100vh;
 
+  &__logo {
+    width: 365px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    @media (max-width: $breakpoint-md) {
+      width: 227px;
+      margin-bottom: 56px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 32px;
+  }
+
+  &__heading, &__description {
+    width: 80%;
+    margin-left: auto;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+    }
+  }
+
   &__info {
     position: absolute;
-    left: 10%;
-    right: 10%;
+    left: 0;
+    right: 0;
     top: 50%;
     z-index: 20;
-    max-width: 864px;
+    width: 100%;
+    max-width: 1064px;
     color: #fff;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     text-align: right;
+    @media (max-width: 1120px) {
+      padding: 0 15px;
+    }
+
   }
 }
 
@@ -255,26 +434,6 @@
   max-height: 570px;
 }
 
-.fraction {
-  &__wrap {
-
-  }
-
-  &__current {
-    font-size: 80px;
-    line-height: 1;
-    color: #A59389;
-  }
-
-  &__total {
-    color: #000000;
-    margin-bottom: 6px;
-
-    &:before {
-      content: '/';
-    }
-  }
-}
 
 .s-about {
 
@@ -343,8 +502,9 @@
       gap: 10.5px;
       padding: 0 10px 0 20px;
       @media (max-width: $breakpoint-md) {
-    padding-left: 12px;
+        padding-left: 12px;
       }
+
       &:after {
         content: '';
         width: 2px;

@@ -75,6 +75,11 @@
   }
 
   &.error {
+    @media (min-width: $breakpoint-md) {
+      & .img {
+        max-width: 100%;
+      }
+    }
     @media (max-width: $breakpoint-md) {
       padding: 123px 0;
       & .img {

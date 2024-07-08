@@ -45,7 +45,9 @@
   .contact {
     &.decor {
       padding-left: 20px;
-
+      @media (max-width: $breakpoint-md) {
+        padding-left: 12px;
+      }
       &:before {
         content: '';
         width: 2px;
