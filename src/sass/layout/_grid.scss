@@ -6,10 +6,10 @@
   width: 100%;
   left: calc(50% - 580px);
   max-width: 1160px;
-  z-index: 2;
+  z-index: 1;
 
   pointer-events: all;
-  display: none;
+
 }
 
 .body-grid, .body-grid span {
