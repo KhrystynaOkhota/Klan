@@ -154,6 +154,9 @@
   &__inner {
     display: grid;
     align-content: space-between;
+    @media (max-width: $breakpoint-md) {
+    padding: 0;
+    }
   }
 
   .btn-primary {

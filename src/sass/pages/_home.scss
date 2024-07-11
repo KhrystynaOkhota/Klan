@@ -80,6 +80,22 @@
   }
 
   & .social {
+    &__item {
+      & a {
+        display: block;
+        width: 32px;
+        height: 32px;
+        @media (max-width: $breakpoint-md) {
+          width: 24px;
+          height: 24px;
+        }
+
+        & img {
+          object-fit: contain;
+        }
+      }
+    }
+
     @media (max-width: $breakpoint-md) {
 
       display: -webkit-box;
@@ -183,7 +199,7 @@
       left: 15px;
       z-index: 4;
       @media (max-width: $breakpoint-md) {
-        bottom: 105px;
+        bottom: 145px;
       }
     }
 

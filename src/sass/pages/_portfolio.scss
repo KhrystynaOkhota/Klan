@@ -90,6 +90,7 @@
       @media (max-width: $breakpoint-md) {
         padding-left: 12px;
       }
+
       & + .benefit__item {
         margin-top: 24px;
       }
@@ -173,6 +174,11 @@
   .project {
     &__heading {
       margin-bottom: 18px;
+    }
+
+    &__sub-heading {
+      @include fontSize(16, 18);
+      margin-bottom: 12px;
     }
 
     &__info {

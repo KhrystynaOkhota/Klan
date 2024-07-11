@@ -9,6 +9,10 @@
   z-index: 1;
 
   pointer-events: all;
+  @media (max-width: $breakpoint-md) {
+    width: calc(100% - 20px);
+    left: 10px;
+  }
 
 }
 
@@ -26,18 +30,30 @@
 
 .body-grid span:first-child {
   left: 0;
+
+
 }
 
 .body-grid span:nth-child(2) {
   left: calc(24.999999% + 5px);
+  @media (max-width: $breakpoint-md) {
+    left: calc(50% - 5px);
+  }
 }
 
 .body-grid span:nth-child(3) {
   left: calc(49.999998% + 10px);
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
 }
 
 .body-grid span:nth-child(4) {
   left: calc(74.999998% + 15px);
+  @media (max-width: $breakpoint-md) {
+    left:auto;
+    right: calc(50% - 5px);
+  }
 }
 
 .body-grid span:nth-child(5) {
