@@ -15,6 +15,7 @@
       @include fontSize(14, 18);
       line-height: 130%;
       margin-bottom: 32px;
+      color: #565656;
 
       & + ul, & + ol {
         margin-top: 15px;
@@ -118,25 +119,30 @@
 
     & ul, & ol {
       margin-bottom: 32px;
-      padding-left: 20px;
-
+      padding-left: 30px;
+      list-style-type: none;
       & li {
         font-weight: normal;
         @include fontSize(14, 18);
-        line-height: 1.7;
+        line-height: 1.3;
 
-        color: #010101;
+        color: #565656;
         position: relative;
         //  padding-left: 15px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
 
-        &:before {
+        &::marker {
+          display: none;
+        }
+
+        &::before {
           content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
           position: absolute;
-          left: 0;
           top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
+          left: 10px;
         }
       }
     }
