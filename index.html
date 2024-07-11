@@ -104,7 +104,7 @@
 
     <section class="s-main mb-180 swiper-entry">
         <div class="container --relative">
-            <div class="row --relative s-main__row">
+            <div class="row s-main__row">
                 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-12 col-xs-12 ">
                     <div class="social__wrap">
                         <div class="social__title"><span>Мы в соц. сетях</span></div>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12 --relative">
+                <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12 s-main__slider--wrap">
                     <div class="s-main__slider">
                         <div class="swiper-container"
                              data-options='{ "parallax":false, "slidesPerView":1, "spaceBetween": 0, "loop": true, "customFraction": true, "breakpoints": {"575": {"slidesPerView": 1,"spaceBetween": 0}, "992": {"slidesPerView": 1}, "1200": {"slidesPerView": 1},"1400": {"slidesPerView": 1}}}'>
@@ -185,22 +185,25 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="swiper-button__wrap d-flex align-left">
+                            <div class="swiper-button-prev d-flex align-left align-middle text-s text-medium">
+                                <i class="icon-ar-left"></i> Назад
+                            </div>
+                            <div class="swiper-button-next d-flex align-right align-middle text-s text-medium">
+                                Дальше <i class="icon-ar-right"></i>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="swiper-button__wrap d-flex align-left">
-                        <div class="swiper-button-prev d-flex align-left align-middle text-s text-medium">
-                            <i class="icon-ar-left"></i> Назад
-                        </div>
-                        <div class="swiper-button-next d-flex align-right align-middle text-s text-medium">
-                            Дальше <i class="icon-ar-right"></i>
-                        </div>
+                    <div class="d-flex align-end align-justify  fraction__wrap">
+                        <div class="custom-current fraction__current text-bold"></div>
+                        <div class="custom-total fraction__total text-l"></div>
                     </div>
+
                 </div>
             </div>
-            <div class="d-flex align-end align-justify  fraction__wrap">
-                <div class="custom-current fraction__current text-bold"></div>
-                <div class="custom-total fraction__total text-l"></div>
-            </div>
+
         </div>
     </section>
 

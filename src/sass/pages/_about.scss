@@ -79,7 +79,9 @@
         height: 35px;
         top: 8px;
         transform: none;
-
+        @media (max-width: $breakpoint-md) {
+          top: 1px;
+        }
       }
     }
   }
