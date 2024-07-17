@@ -32,7 +32,7 @@ html:not(.touch-screen)::-webkit-scrollbar-track, html:not(.touch-screen) *::-we
 }
 
 html:not(.touch-screen)::-webkit-scrollbar-thumb, html:not(.touch-screen) *::-webkit-scrollbar-thumb {
-  background-color: $accentColor !important;
+  background-color: $accent-color !important;
 }
 
 .lg-actions .lg-next, .lg-actions .lg-prev {

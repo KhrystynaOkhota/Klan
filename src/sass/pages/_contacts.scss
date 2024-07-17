@@ -6,6 +6,11 @@
     @media (max-width: $breakpoint-md) {
       margin-bottom: 20px;
     }
+
+    &__title, &__info {
+      @include fontSize(14, 16);
+    }
+
     &__title {
       margin-bottom: 12px;
       @media (max-width: $breakpoint-md) {
@@ -14,11 +19,10 @@
     }
 
     &__info {
+      color: $body-text;
     }
 
-    &__title, &__info {
-      @include fontSize(14, 16);
-    }
+
   }
 
   &__cta {
@@ -48,6 +52,7 @@
       @media (max-width: $breakpoint-md) {
         padding-left: 12px;
       }
+
       &:before {
         content: '';
         width: 2px;

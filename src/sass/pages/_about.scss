@@ -4,7 +4,6 @@
 
 .s-introduce {
 
-
   &__img {
     position: absolute;
     top: 0;
@@ -39,10 +38,6 @@
       margin-bottom: 12px;
     }
 
-    &__description {
-      color: #565656;
-    }
-
     &__item {
       &.decor {
         &:after {
@@ -65,6 +60,7 @@
   }
 
   & .description {
+    color: $body-text;
     @media (max-width: $breakpoint-sm) {
       padding-left: 20px;
     }
@@ -157,7 +153,7 @@
     display: grid;
     align-content: space-between;
     @media (max-width: $breakpoint-md) {
-    padding: 0;
+      padding: 0;
     }
   }
 
@@ -171,6 +167,7 @@
 
   .title {
     margin-bottom: 12px;
+    color: $black-main;
   }
 
   & .description {
@@ -218,7 +215,7 @@
         font-size: 80px;
         @include fontSize(60, 80);
         line-height: 1;
-        color: #A59389;
+        color: $accent-color;
         margin-right: 28px;
         font-weight: 700;
         @media (max-width: $breakpoint-md) {
@@ -301,6 +298,7 @@
 
     &__name {
       margin-bottom: 8px;
+      color: $black-main;
     }
 
     &__item {
@@ -353,6 +351,7 @@
 
     &__name {
       margin-bottom: 12px;
+      color: $black-main;
     }
 
     &__position {
