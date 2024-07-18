@@ -316,7 +316,25 @@
   }
 
   .swiper-slide {
+
+    &:nth-child(4n+1) {
+      width: calc(24.999999% + 4.7px)
+    }
+
+    &:nth-child(4n+2) {
+      width: calc(24.999999% + 7px)
+    }
+
+    &:nth-child(4n+3) {
+      width: calc(24.999999% + 4px)
+    }
+
+    &:nth-child(4n+4) {
+      width: calc(24.999999% + 7px)
+    }
+
     &:nth-child(even) {
+
       .team__item {
         margin-top: 80px;
         @media (max-width: $breakpoint-md) {
@@ -378,6 +396,8 @@
       }
     }
   }
+
+
 }
 
 .s-partners {
